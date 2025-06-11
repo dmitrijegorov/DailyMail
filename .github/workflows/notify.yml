@@ -34,3 +34,16 @@ jobs:
                     "text": "🏦 OTP Today",
                     "format": "markdown"
                    }'
+    - name: Max
+      env:
+        TOKEN:   ${{ secrets.MAX }}
+        CHAT_ID: ${{ secrets.MAX_CHAT }}
+      run: |
+        curl -X POST \
+               ""https://botapi.max.ru/messages?access_token=$TOKEN&chat_id=$CHAT_ID" \
+               -H "Content-Type: application/json" \
+               -d '{
+                    "disable_link_preview": false,
+                    "text": "🏦 OTP Today",
+                    "format": "markdown"
+                   }'
