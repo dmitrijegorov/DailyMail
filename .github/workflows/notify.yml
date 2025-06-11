@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
       
 jobs:
-  notification:
+  notification-disc:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,6 +21,13 @@ jobs:
       run: |
         curl -F "payload_json={\"content\": \"🏦 OTP Today\"}" \
              $DISC
+             
+  notification-tam:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4       
     - name: TamTam
       env:
         TOKEN:   ${{ secrets.TAM }}
@@ -34,13 +41,20 @@ jobs:
                     "text": "🏦 OTP Today",
                     "format": "markdown"
                    }'
+                   
+  notification-max:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
     - name: Max
       env:
         TOKEN:   ${{ secrets.MAX }}
         CHAT_ID: ${{ secrets.MAX_CHAT }}
       run: |
         curl -X POST \
-               ""https://botapi.max.ru/messages?access_token=$TOKEN&chat_id=$CHAT_ID" \
+               "https://botapi.max.ru/messages?access_token=$TOKEN&chat_id=$CHAT_ID" \
                -H "Content-Type: application/json" \
                -d '{
                     "disable_link_preview": false,
