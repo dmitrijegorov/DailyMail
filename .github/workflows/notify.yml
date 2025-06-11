@@ -17,7 +17,7 @@ jobs:
 
     - name: Send notification
       env:
-        DISCORD_WEBHOOK: ${{ secrets.DISC }}
+        DISC: ${{ secrets.DISC }}
       run: |
         curl -F "payload_json={\"content\": \"🏦 OTP Today\"}" \
              $DISC
