@@ -27,7 +27,7 @@ jobs:
         CHAT_ID: ${{ secrets.TAM_CHAT }}
       run: |
         curl -X POST \
-               "https://botapi.tamtam.chat/messages?access_token=$TOKEN&chat_i=$CHAT_ID" \
+               "https://botapi.tamtam.chat/messages?access_token=$TOKEN&chat_id=$CHAT_ID" \
                -H "Content-Type: application/json" \
                -d '{
                     "disable_link_preview": false,
