@@ -1,4 +1,4 @@
-name: Img2txt
+name: Notification Daily
 
 on:
   schedule:
