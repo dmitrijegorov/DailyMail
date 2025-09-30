@@ -1,10 +1,10 @@
 name: Notification Daily
 
 on:
-  schedule:
+  # schedule:
     # At 9:08 AM on the each day of the month, Moscow time (UTC+3)
     # Cron times are in UTC so adjust accordingly: 9 AM UTC+3 is 6 AM UTC
-    - cron: '8 6 * * *'
+    # cron: '8 6 * * *'
   workflow_dispatch:
       
 jobs:
