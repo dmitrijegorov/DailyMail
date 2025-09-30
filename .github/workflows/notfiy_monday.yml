@@ -1,4 +1,4 @@
-name: Notification Daily
+name: Notification Sw Monday
 
 on:
   schedule:
