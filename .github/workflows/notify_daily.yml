@@ -19,7 +19,7 @@ jobs:
       env:
         DISC: ${{ secrets.DISC }}
       run: |
-        curl -F "payload_json={\"content\": \"🏊 🌊 Today 18:45 🐬\"}" \
+        curl -F "payload_json={\"content\": \"🏊 🌊 Today 18:45 🐬 📸 Take a photo\"}" \
              $DISC
              
   notification-tam:
@@ -38,7 +38,7 @@ jobs:
                -H "Content-Type: application/json" \
                -d '{
                     "disable_link_preview": false,
-                    "text": "🏊 🌊 Today 18:45 🐬",
+                    "text": "🏊 🌊 Today 18:45 🐬 📸 Take a photo",
                     "format": "markdown"
                    }'
                    
@@ -58,6 +58,6 @@ jobs:
                -H "Content-Type: application/json" \
                -d '{
                     "disable_link_preview": false,
-                    "text": "🏊 🌊 Today 18:45 🐬",
+                    "text": "🏊 🌊 Today 18:45 🐬 📸 Take a photo",
                     "format": "markdown"
                    }'
