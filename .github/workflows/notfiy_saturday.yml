@@ -21,26 +21,6 @@ jobs:
       run: |
         curl -F "payload_json={\"content\": \"📚 Today 14:40 \"}" \
              $DISC
-             
-  notification-tam:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout repo
-      uses: actions/checkout@v4       
-    - name: TamTam
-      env:
-        TOKEN:   ${{ secrets.TAM }}
-        CHAT_ID: ${{ secrets.TAM_CHAT }}
-      run: |
-        curl -X POST \
-               "https://botapi.tamtam.chat/messages?access_token=$TOKEN&chat_id=$CHAT_ID" \
-               -H "Content-Type: application/json" \
-               -d '{
-                    "disable_link_preview": false,
-                    "text": "📚 Today 14:40 ",
-                    "format": "markdown"
-                   }'
                    
   notification-max:
     runs-on: ubuntu-latest
