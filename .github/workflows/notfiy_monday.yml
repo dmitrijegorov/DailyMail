@@ -21,23 +21,3 @@ jobs:
       run: |
         curl -F "payload_json={\"content\": \"🏊 🌊 Monday 18:45 🐬\"}" \
              $DISC
-                   
-  notification-max:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout repo
-      uses: actions/checkout@v4
-    - name: Max
-      env:
-        TOKEN:   ${{ secrets.MAX }}
-        CHAT_ID: ${{ secrets.MAX_CHAT }}
-      run: |
-        curl -X POST \
-               "https://botapi.max.ru/messages?access_token=$TOKEN&chat_id=$CHAT_ID" \
-               -H "Content-Type: application/json" \
-               -d '{
-                    "disable_link_preview": false,
-                    "text": "🏊 🌊 🐬 Monday 18:45 🐬",
-                    "format": "markdown"
-                   }'
