@@ -19,7 +19,7 @@ jobs:
       env:
         DISC: ${{ secrets.DISC }}
       run: |
-        curl -F "payload_json={\"content\": \" Lounge + Transfer\"}" \
+        curl -F "payload_json={\"content\": \" Lounge 💼 + Transfer\"}" \
              $DISC
                    
   notification-max:
