@@ -4,7 +4,7 @@ on:
   schedule:
     # At 17:08 AM on the each day of the month, Moscow time (UTC+3)
     # Cron times are in UTC so adjust accordingly: 9 AM UTC+3 is 6 AM UTC
-    - cron: '08 14 30,31 * *'
+    - cron: '08 14 29,30,31 * *'
   workflow_dispatch:
       
 jobs:
@@ -19,5 +19,5 @@ jobs:
       env:
         DISC: ${{ secrets.DISC }}
       run: |
-        curl -F "payload_json={\"content\": \" Lounge 💼 + Transfer\"}" \
+        curl -F "payload_json={\"content\": \" Raf, Lounge 💼 + Transfer\"}" \
              $DISC
