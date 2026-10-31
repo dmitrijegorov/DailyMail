@@ -1,4 +1,4 @@
-name: Notification Sw Daily
+name: Notification Sw Saturday
 
 on:
   schedule:
@@ -19,5 +19,5 @@ jobs:
       env:
         DISC: ${{ secrets.DISC }}
       run: |
-        curl -F "payload_json={\"content\": \"🏊 🌊 Today 09:50 🐬 📸 Take a photo\"}" \
+        curl -F "payload_json={\"content\": \"🏊 🌊 Today 09:35 🐬 📸 Take a photo\"}" \
              $DISC
