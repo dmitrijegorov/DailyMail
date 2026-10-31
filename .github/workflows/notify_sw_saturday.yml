@@ -2,9 +2,9 @@ name: Notification Sw Daily
 
 on:
   schedule:
-    # At 16:11 AM on Tuesday, Thursday and Friday, Moscow time (UTC+3)
+    # At 08:01 AM on Saturday, Moscow time (UTC+3)
     # Cron times are in UTC so adjust accordingly: 9 AM UTC+3 is 6 AM UTC
-    - cron: '11 13 * * 2,4,5'
+    - cron: '01 5 * * 6'
   workflow_dispatch:
       
 jobs:
@@ -19,5 +19,5 @@ jobs:
       env:
         DISC: ${{ secrets.DISC }}
       run: |
-        curl -F "payload_json={\"content\": \"🏊 🌊 Today 18:45 🐬 📸 Take a photo\"}" \
+        curl -F "payload_json={\"content\": \"🏊 🌊 Today 09:50 🐬 📸 Take a photo\"}" \
              $DISC
