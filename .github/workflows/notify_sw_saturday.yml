@@ -2,9 +2,9 @@ name: Notification Sw Saturday
 
 on:
   schedule:
-    # At 08:01 AM on Saturday, Moscow time (UTC+3)
+    # At 05:38 AM on Saturday, Moscow time (UTC+3)
     # Cron times are in UTC so adjust accordingly: 9 AM UTC+3 is 6 AM UTC
-    - cron: '01 5 * * 6'
+    - cron: '38 2 * * 6'
   workflow_dispatch:
       
 jobs:
